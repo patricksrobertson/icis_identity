@@ -9,7 +9,7 @@ module Api::V1
 
     def verify_identity
       if access_token
-        render json: JSON.parse({}), status: 200
+        render json: JSON.parse(''), status: 200
       else
         render text: 'Unauthorized', status: 403
       end
