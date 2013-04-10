@@ -5,7 +5,7 @@ IcisIdentity::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/me' => "credentials#me"
-      resource :verify, only: ['show']
+      resource :verify, controller: 'verify', only: ['show']
     end
   end
 
